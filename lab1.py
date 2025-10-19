@@ -1,5 +1,5 @@
+import json
 import os
-from pprint import pprint
 
 import vk_api as vk
 from dotenv import load_dotenv
@@ -10,7 +10,14 @@ VK_ACCESS_TOKEN = os.getenv("VK_ACCESS_TOKEN")
 
 session = vk.VkApi(token=VK_ACCESS_TOKEN)
 
-vk = session.get_api()
-posts = vk.wall.get(domain="beluniversity", count=5)
+vk_api = session.get_api()
 
-pprint(posts)
+groups = vk_api.groups.get()
+posts = {}
+
+for group_id in groups["items"][:20]:
+    posts[group_id] = vk_api.wall.get(owner_id=-group_id, count=1)
+
+with open("posts.json", "w") as file:
+    file.write(json.dumps(posts))
+
