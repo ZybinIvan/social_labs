@@ -1581,6 +1581,7 @@ dependencies = [
     { name = "pandas" },
     { name = "python-dotenv" },
     { name = "scikit-learn" },
+    { name = "vk" },
     { name = "vk-api" },
 ]
 
@@ -1594,6 +1595,7 @@ requires-dist = [
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "scikit-learn", specifier = ">=1.7.2" },
+    { name = "vk", specifier = ">=3.0" },
     { name = "vk-api", specifier = ">=11.10.0" },
 ]
 
@@ -1729,6 +1731,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760", size = 393185 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc", size = 129795 },
+]
+
+[[package]]
+name = "vk"
+version = "3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c1/c7/7593fa1d3945db3f3b2281d074d7d4a977713a8f0a3c34e1ea7edd29fef5/vk-3.0.tar.gz", hash = "sha256:2d5ec6cd33b2774fc0f2da77d28bedc3e57a22b0c562ea817d95e792d7413b7f", size = 11258 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c1/e8/0d830e92685f506c298eedcd1fdd87363674a1f4e51917b13f190c3c36e5/vk-3.0-py3-none-any.whl", hash = "sha256:92363319b6d036b8ba4c9d7caa514da8ee015e8e2c7c9f4beba818e8a224dc8b", size = 11284 },
 ]
 
 [[package]]
